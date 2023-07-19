@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+    background-color: aquamarine;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 10px rgba(74, 227, 232, 0.936);
+
+    >div {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 7px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(245, 189, 84);
+            color: white;
+            box-shadow: 0 0 3px 3px rgba(255, 166, 0, 0.566);
+        }
+    }
+}
+
+.main {
+    background-color: rgb(190, 243, 243);
+    min-height: calc(100vh - 100px);
+    margin-top: 20px;
+    border-radius: 10px;
+}
