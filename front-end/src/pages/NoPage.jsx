@@ -1,4 +1,4 @@
-import "./homepage.scss";
+import "../pages/home/homepage.scss";
 
 export default function NoPage() {
   return (

@@ -3,10 +3,10 @@ import "./table.scss";
 export default function Table(props) {
   function renderTableData() {
     return props.data.map((item, index) => {
-      const { id, username, email, role } = item;
+      const { _id, username, email, role } = item;
       return (
         <tr key={index}>
-          <td>{id}</td>
+          <td>{_id}</td>
           <td>{username}</td>
           <td>{email}</td>
           <td>{role.join(", ")}</td>
@@ -16,7 +16,7 @@ export default function Table(props) {
   }
 
   function renderTableHeader() {
-    const header = Object.keys(props.data[0]);
+    const header = ["ID", "username", "email", "role"];
     return header.map((key, index) => <th key={index}>{key.toUpperCase()}</th>);
   }
   return (

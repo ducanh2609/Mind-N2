@@ -17,7 +17,8 @@ export default function Login() {
       const message = await res.json();
       console.log(message);
       localStorage.setItem("token", message.token);
-      if (message) window.location.href = "/user";
+      if (message) window.location.href = `/user`;
+      localStorage.setItem("user", data.username);
     });
   }
   return (

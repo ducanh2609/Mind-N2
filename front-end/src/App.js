@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/home/HomePage";
-import DefaultLayout from "./components/layout/DefaultLayout";
-import Register from "./components/home/Regisrer";
-import Login from "./components/home/Login";
-import NoPage from "./components/home/NoPage";
-import UserPage from "./components/user-manager/UserPage";
+import HomePage from "./pages/home/HomePage";
+import DefaultLayout from "./layout/DefaultLayout";
+import Register from "./pages/Regisrer";
+import Login from "./pages/Login";
+import NoPage from "./pages/NoPage";
+import UserPage from "./pages/user/UserPage";
 
 function App() {
   return (

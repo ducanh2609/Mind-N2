@@ -1,14 +1,18 @@
 const bcrypt = require('bcrypt')
-const { getAllUserDb, postUserToDb } = require('../models/users.models')
+const { getAllUserDb, postUserToDb, getUserOneDb } = require('../models/users.models')
 
-module.exports.getUser = async (req, res) => {
+module.exports.getAllUser = async (req, res) => {
     try {
-        let getUser
-        if (!req.body.username) {
-            getUser = await getAllUserDb()
-        } else {
-            getUser = req.user
-        }
+        let getUser = await getAllUserDb()
+        res.send(getUser)
+    } catch (error) {
+        console.log(error)
+    }
+}
+module.exports.getUser = async (req, res) => {
+    const { username } = req.params
+    try {
+        let getUser = await getUserOneDb({ username })
         res.send(getUser)
     } catch (error) {
         console.log(error)
