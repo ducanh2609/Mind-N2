@@ -22,8 +22,9 @@ module.exports.checkAuthentication = (req, res, next) => {
     }
 }
 module.exports.checkAuthoziration = async (req, res, next) => {
-    const { username } = req.body
-    const user = await getUserOneDb(username)
+    const { username } = req.headers
+    const user = await getUserOneDb({ username })
+    console.log(user);
     if (user?.role.includes("admin")) next()
     else res.json(user)
 }

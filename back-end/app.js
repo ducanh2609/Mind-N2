@@ -10,7 +10,7 @@ app.use(cors())
 const userRouter = require('./routes/users.routes');
 const { login } = require('./controllers/app.controllers');
 const { postUser } = require('./controllers/users.controllers');
-app.use('/user', checkAuthentication, userRouter)
+app.use('/user', userRouter)
 
 app.get('/', (req, res) => {
     res.send('Homepage')
